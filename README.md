@@ -32,6 +32,7 @@ The above NEON implementation is already faster than the pure C implementation.
 My implmenetation uses VSLI instruction and reduces one instruction. Additionally, my implementation uses VREV instruction and reduces two instructions when the shift value is the half of the bit length of the integer.
 
 ```cpp
+// optimized NEON
 template<int n>
 uint32x4_t vshlcq_n_u32(uint32x4_t v)
 {
