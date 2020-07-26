@@ -18,11 +18,11 @@ static uint32_t shift_l_circular_n_u32(uint32_t v, int n)
 
 // naive NEON
 template<int n>
-static uint32x2_t vshlc_slow_n_u32(uint32x2_t v)
+static uint32x4_t vshlcq_slow_n_u32(uint32x4_t v)
 {
-  const auto tmp0 = vshr_n_u32(v, 32 - n);
-  const auto tmp1 = vshl_n_u32(v, n);
-  const auto ret = vorr_u32(tmp0, tmp1);
+  const auto tmp0 = vshrq_n_u32(v, 32 - n);
+  const auto tmp1 = vshlq_n_u32(v, n);
+  const auto ret = vorrq_u32(tmp0, tmp1);
   return ret;
 }
 ```
