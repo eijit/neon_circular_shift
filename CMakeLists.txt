@@ -15,10 +15,10 @@ add_definitions(-march=armv7-a -mfpu=neon)
 
 add_executable(${MY_APP}
   "${MY_APP_DIR}/main.cpp"
-  "${MY_APP_DIR}/test_q_u8.cpp"
-  "${MY_APP_DIR}/test_q_u16.cpp"
-  "${MY_APP_DIR}/test_q_u32.cpp"
-  "${MY_APP_DIR}/test_q_u64.cpp"
+  "${MY_APP_DIR}/test_u8.cpp"
+  "${MY_APP_DIR}/test_u16.cpp"
+  "${MY_APP_DIR}/test_u32.cpp"
+  "${MY_APP_DIR}/test_u64.cpp"
 )
 
 #target_include_directories(${MY_APP})
