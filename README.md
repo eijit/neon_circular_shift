@@ -29,7 +29,7 @@ static uint32x4_t vshlcq_slow_n_u32(uint32x4_t v)
 
 The above NEON implementation is already faster than the pure C implementation.
 
-My implmenetation uses VSLI instruction and reduces one instruction from naitve NEON implementation. Additionally, my implementation uses VREV instruction and reduces two instructions from naitve NEON implementation when the shift value is the half of the bit length of the integer.
+My implmenetation uses VSLI instruction and reduces one instruction from the naive NEON implementation. Additionally, my implementation uses VREV instruction and reduces two instructions from naive NEON implementation when the shift value is the half of the bit length of the integer.
 
 ```cpp
 // optimized NEON
@@ -53,7 +53,7 @@ The following is the test result on Raspberry Pi3 Model B (ARMv7 Processor rev 4
 
 ```text
 perf_u8 copy  : 474
-perf_u8 pure c: 5496 
+perf_u8 pure c: 5496
 perf_u8 neon f: 1695
 perf_u8 neon s: 1755
 perf_u16 copy  : 501
